@@ -1,6 +1,6 @@
-#include<iostream>
-#include<string>
-#include<math.h>
+#include "Source.h"
+
+
 using namespace std;
 
 // Решение системы линейных уравнений с двумя неизвестными по теореме Крамера.
@@ -32,17 +32,8 @@ using namespace std;
 */
 //макрос конвертации имени переменной в строку
 
+//декларация методов (объявление)
 
-//#define PRINT(var_) std::cout << #var_ << ": " << var_ << std::endl;
-
-// Записываем новое имя в переменную
-//#define SAVE_VARIBLE_NAME(varible) getVaribleName_LAST_NAME = string(#varible); 
-//void inputData(int & var)
-////ввод данных
-//{
-//    cout << "Введите" << var << " : ";
-//    cin >> var;
-//}
 void inputData(int& var_x1,const char* str_x1, int& var_y1, const char* str_y1, int& var_b1,
     const char* str_b1);
  
@@ -50,28 +41,6 @@ double getDet(int& x1, int& x2, int& y1, int& y2);
 
 void outputData(float& detA, const char* str_detA, float& detX, const char* str_detX, float& detY, const char* str_detY);
 
-//void computeDet(){
-//detA = getDet(x1, x2, y1, y2);//завернем абстрагируем в отдельную функцию
-//if (detA == 0)
-//{
-//    cout << "Система не имеет решений." << endl;
-//}
-//else
-//{
-//    detX = getDet(b1, b2, y1, y2);
-//    detY = getDet(x1, x2, b1, b2);
-//
-//
-//    x = detX / detA;
-//    y = detY / detA;
-//
-//
-//    outputData(detA,"detA");//cout << "detA = " << detA << " ";//обернуть функцией вывода, будет 1 переменнаяс одним строковым литералом - названием
-//    cout << "detX = " << detX << " ";//
-//    cout << "detY = " << detY << endl;//
-//    cout << "x = " << x << endl;
-//    cout << "y = " << y;
-//    cout << endl;}
 
 
 int main() {
@@ -118,6 +87,7 @@ int main() {
         return 0;
 }
 
+//имплементация методов (задание тел методов)
 
 void inputData(int& var_x1,const char* str_x1, int& var_y1, const char* str_y1, int& var_b1,
     const char* str_b1)
